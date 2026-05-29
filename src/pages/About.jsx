@@ -63,16 +63,75 @@ const stripFade = {
 export default function About() {
   return (
     <div className="w-full min-h-screen">
-      {/* Full bleed grid, 4 columns: strip | text | text | strip */}
+      {/* Mobile: plain text only */}
+      <div className="lg:hidden px-6 py-20 flex flex-col gap-8 max-w-[640px]">
+        <motion.span
+          className="text-[10px] uppercase tracking-[0.25em] text-[#9B9B9B] block"
+          custom={0}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          The Story
+        </motion.span>
+        <motion.h1
+          className="text-[36px] font-bold font-quote tracking-[-0.03em] text-[#0A0A0A] leading-[1.1]"
+          custom={1}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          Things worth owning.
+        </motion.h1>
+        <motion.p
+          className="text-[15px] text-[#6B6B6B] leading-tight"
+          custom={2}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          It started with a YouTube rabbit hole. One vlog, then another, then
+          suddenly it was 2am and I was watching a stranger in Tokyo arrange a
+          desk I would never own in an apartment I would never live in.
+          Something about it stayed with me.
+        </motion.p>
+        <motion.p
+          className="text-[15px] text-[#6B6B6B] leading-tight"
+          custom={3}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          The clean lines, the intentional objects, the idea that a space could
+          say something about the person inside it. I became quietly obsessed.
+          Not with buying things, but with the feeling those spaces gave me. The
+          calm. The focus. The sense that everything had been chosen on purpose.
+        </motion.p>
+        <motion.p
+          className="text-[15px] text-[#6B6B6B] leading-tight"
+          custom={4}
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+        >
+          This site is that obsession made visible. A running list of objects I
+          find beautiful, spaces I find inspiring, things I one day want to own.
+          No algorithm picked these. No brand paid for placement. Just a person,
+          a wishlist, and a very long memory of late nights spent watching other
+          people live beautifully.
+        </motion.p>
+      </div>
+
+      {/* Desktop: full grid with marquee */}
       <div
-        className="grid w-full"
+        className="hidden lg:grid w-full"
         style={{
           gridTemplateColumns: "1fr 2fr 2fr 1fr",
           minHeight: "100vh",
           gap: "0",
         }}
       >
-        {/* Strip 1: scrolls down */}
+        {/* Strip 1 */}
         <motion.div
           className="relative px-2 py-8"
           style={{ height: "100vh", position: "sticky", top: 0 }}
@@ -95,7 +154,6 @@ export default function About() {
           >
             The Story
           </motion.span>
-
           <motion.h1
             className="text-[38px] font-bold font-quote tracking-[-0.03em] text-[#0A0A0A] leading-[0.75] mb-12"
             custom={1}
@@ -107,7 +165,6 @@ export default function About() {
             <br />
             owning.
           </motion.h1>
-
           <motion.p
             className="text-[15px] text-[#6B6B6B] leading-tight max-w-[320px]"
             custom={2}
@@ -137,7 +194,6 @@ export default function About() {
             gave me. The calm. The focus. The sense that everything had been
             chosen on purpose.
           </motion.p>
-
           <motion.p
             className="text-[15px] text-[#6B6B6B] leading-tight max-w-[320px]"
             custom={4}
@@ -153,7 +209,7 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* Strip 2: scrolls up */}
+        {/* Strip 2 */}
         <motion.div
           className="relative px-2 py-8 border-l border-[#E8E8E8]"
           style={{ height: "100vh", position: "sticky", top: 0 }}

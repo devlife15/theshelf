@@ -71,7 +71,7 @@ export default function ProductDetail() {
     .slice(0, 3);
 
   return (
-    <div className="w-full pt-4">
+    <div className="max-w-360 mx-auto px-6 md:px-12 pt-4 pb-10">
       {/* Split Structural Layout Container */}
       <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start mb-32">
         {/* LEFT COLUMN: SWIPABLE CINEMATIC CAROUSEL (60% Width) */}

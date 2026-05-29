@@ -1,7 +1,26 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import productsData from "../data/products.json";
 import categoriesData from "../data/categories.json";
 import ProductCard from "../components/ProductCard";
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.07,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+  },
+};
 
 export default function Home() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -12,20 +31,19 @@ export default function Home() {
       : productsData.filter((p) => p.category === activeCategory);
 
   return (
-    <div className="max-w-7xl px-6 mx-auto pb-10">
-      {/* {was w-full above} */}
-      {/* Editorial High-Character Heading Block */}
-      <header className="max-w-4xl mt-12 mb-20 opacity-0 animate-hero-fade">
-        <h1 className="text-[56px] md:text-[76px] font-bold font-quote tracking-[-0.03em] text-[#0A0A0A] leading-[1.05] mb-6">
-          Things worth owning.
+    <div className="max-w-360 mx-auto px-6 md:px-12 pb-10">
+      <header className="max-w-4xl mt-20 mb-20 opacity-0 animate-hero-fade">
+        <h1 className="text-[56px] md:text-[76px] font-bold font-quote tracking-[-0.03em] text-[#0A0A0A] leading-[0.65] mb-10">
+          Things worth <br />
+          owning.
         </h1>
-        <p className="text-[16px] md:text-[18px] text-[#6B6B6B] font-normal leading-tight max-w-xl">
+        <p className="text-[15px] md:text-[17px] text-[#6B6B6B] font-normal leading-tight max-w-xl">
           A personal archive of furniture and workspace objects. <br /> Updated
           when something earns it.
         </p>
       </header>
 
-      {/* Minimalist Pill Filter Bar */}
+      {/* Filter bar */}
       <div className="w-full overflow-x-auto no-scrollbar flex gap-2.5 mb-12 pb-2">
         <button
           onClick={() => setActiveCategory("All")}
@@ -54,12 +72,25 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Editorial Responsive Layout Grid */}
-      <main className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </main>
+      <AnimatePresence mode="wait">
+        <motion.main
+          key={activeCategory}
+          className="columns-1 md:columns-2 lg:columns-3 gap-x-15"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {filteredProducts.map((product) => (
+            <motion.div
+              key={product.id}
+              className="break-inside-avoid mb-16"
+              variants={cardVariants}
+            >
+              <ProductCard product={product} />
+            </motion.div>
+          ))}
+        </motion.main>
+      </AnimatePresence>
     </div>
   );
 }

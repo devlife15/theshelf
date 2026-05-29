@@ -91,7 +91,7 @@ export default function CardStack({ categories }) {
 
       {/* Stack container */}
       <div
-        className="relative w-full max-w-[520px] mx-auto"
+        className="relative w-full max-w-130 mx-auto"
         style={{ height: "600px", perspective: "1200px" }}
       >
         {categories.map((category, i) => {
@@ -138,12 +138,12 @@ export default function CardStack({ categories }) {
                 />
 
                 {/* Dark overlay so text is always readable */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent z-10" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/20 to-transparent z-10" />
 
                 {/* Footer meta */}
                 <div className="absolute bottom-0 inset-x-0 p-7 flex justify-between items-end z-20">
                   <div className="flex flex-col gap-1">
-                    <span className="text-[11px] text-[#6B6B6B] uppercase tracking-[0.2em] font-mono">
+                    <span className="text-[11px] text-[#6B6B6B] uppercase tracking-[0.2em]">
                       {String(
                         activeIndex === i ? activeIndex + 1 : "",
                       ).padStart(2, "0") || `0${i + 1}`}
@@ -152,7 +152,7 @@ export default function CardStack({ categories }) {
                       {category.label}
                     </h3>
                     <motion.p
-                      className="text-[13px] text-[#A0A0A0] mt-1 max-w-[260px]"
+                      className="text-[13px] text-[#A0A0A0] mt-1 max-w-65"
                       animate={{
                         opacity: isActive ? 1 : 0,
                         y: isActive ? 0 : 6,
@@ -164,18 +164,6 @@ export default function CardStack({ categories }) {
                     >
                       {category.description}
                     </motion.p>
-                  </div>
-                  <div className="flex flex-col items-end gap-1">
-                    <span className="text-[11px] text-[#6B6B6B] uppercase tracking-[0.2em] font-mono">
-                      {category.itemCount} units
-                    </span>
-                    <motion.span
-                      className="text-[11px] text-white uppercase tracking-[0.15em] font-mono flex items-center gap-1"
-                      animate={{ opacity: isActive ? 1 : 0 }}
-                      transition={{ duration: 0.3, delay: 0.2 }}
-                    >
-                      Enter to open →
-                    </motion.span>
                   </div>
                 </div>
               </div>

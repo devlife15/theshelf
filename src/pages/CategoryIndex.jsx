@@ -5,7 +5,7 @@ import CardStack from "../components/CardStack";
 
 export default function CategoryIndex() {
   return (
-    <div className="w-full pt-8">
+    <div className="max-w-360 mx-auto px-6 md:px-12 pt-8 pb-10">
       <header className="mb-16">
         <h1 className="text-[44px] md:text-[56px] font-bold font-quote tracking-[-0.02em] text-[#0A0A0A]">
           The collection.

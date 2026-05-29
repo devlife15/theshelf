@@ -11,7 +11,7 @@ export default function CollectionPage() {
   const filteredProducts = productsData.filter((p) => p.category === category);
 
   return (
-    <div className="w-full pt-4">
+    <div className="max-w-360 mx-auto px-6 md:px-12 pt-4">
       <div className="mb-12">
         <Link
           to="/categories"

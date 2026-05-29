@@ -6,7 +6,10 @@
     "category": "desk",
     "price": 850,
     "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1692133226337-55e513450a32?q=80&w=1470&auto=format&fit=crop",
+    "orientation": "landscape",
+    "images": [
+      "https://images.unsplash.com/photo-1692133226337-55e513450a32?q=80&w=1470&auto=format&fit=crop"
+    ],
     "affiliateUrl": "https://example.com/affiliate/desk-1",
     "note": "The grain flow remains continuous across the central joint interface.",
     "tags": ["minimal", "oak", "premium"],
@@ -19,7 +22,9 @@
     "category": "lighting",
     "price": "₹ 6,999",
     "currency": "INR",
+    "orientation": "portrait",
     "images": [
+      "https://gharko.in/cdn/shop/files/Feature1_6f249959-daeb-4a65-8ad3-46a862d626c1.webp?v=1740073023&width=864",
       "https://gharko.in/cdn/shop/files/Donut_Lamp_Feature_3.webp?v=1763571693&width=868",
       "https://gharko.in/cdn/shop/files/Feature5_48627b3b-0da4-4202-a1e1-7cbd6ca8bf6e.webp?v=1740073022&width=1096",
       "https://gharko.in/cdn/shop/files/Feature4_ded77acc-3ea5-4889-bc15-7680f7bda529.webp?v=1740073023&width=870"
@@ -36,7 +41,10 @@
     "category": "seating",
     "price": 595,
     "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop",
+    "orientation": "portrait",
+    "images": [
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop"
+    ],
     "affiliateUrl": "https://example.com/affiliate/chair-1",
     "note": "The raw fiberglass texture gives an architectural edge that modern plastics miss.",
     "tags": ["vintage-spec", "fiberglass", "mid-century"],
@@ -49,7 +57,10 @@
     "category": "desk",
     "price": 1200,
     "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop",
+    "orientation": "landscape",
+    "images": [
+      "https://images.unsplash.com/photo-1595428774223-ef52624120d2?q=80&w=800&auto=format&fit=crop"
+    ],
     "affiliateUrl": "https://example.com/affiliate/bench-1",
     "note": "Functions beautifully as an extended side desk returning point.",
     "tags": ["japanese", "walnut"],
@@ -62,7 +73,10 @@
     "category": "lighting",
     "price": 380,
     "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format&fit=crop",
+    "orientation": "square",
+    "images": [
+      "https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format&fit=crop"
+    ],
     "affiliateUrl": "https://example.com/affiliate/bulb-1",
     "note": "Diffuses light across matte surfaces evenly without cast shadows.",
     "tags": ["minimal", "under-500"],
@@ -75,7 +89,10 @@
     "category": "seating",
     "price": 910,
     "currency": "USD",
-    "image": "https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=800&auto=format&fit=crop",
+    "orientation": "portrait",
+    "images": [
+      "https://images.unsplash.com/photo-1506898667547-42e22a46e125?q=80&w=800&auto=format&fit=crop"
+    ],
     "affiliateUrl": "https://example.com/affiliate/chair-2",
     "note": "Raw industrial contrast against warm natural woods.",
     "tags": ["industrial", "aluminum"],

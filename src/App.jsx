@@ -10,7 +10,7 @@ import About from "./pages/About";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col mx-auto px-6 md:px-12 bg-[#FAFAFA]">
+      <div className="min-h-screen flex flex-col  bg-[#FAFAFA]">
         <Navbar />
         <main className="grow">
           <Routes>
