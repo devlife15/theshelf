@@ -1,1 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Spline+Sans:wght@300..700&display=swap");
+
 @import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #fafafa;
+    color: #0a0a0a;
+    font-family: "Spline Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@theme {
+  /* This creates a custom utility class: font-display */
+  --font-quote: "Caveat", sans-serif;
+}
+
+/* Custom Animation Utilities for Category Folders */
+.perspective-600 {
+  perspective: 600px;
+}
+
+.folder-flap-trigger {
+  transform-origin: top center;
+  transition:
+    transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tab Nub Detail from folder category inspo.jfif */
+.folder-flap::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 56px;
+  height: 10px;
+  background: #111;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Hero Section Fade In */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: fadeIn 800ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

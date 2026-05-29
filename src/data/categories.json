@@ -1,0 +1,23 @@
+[
+  {
+    "slug": "desk",
+    "label": "Desk",
+    "description": "Surfaces worth working on.",
+    "editorialImage": "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop",
+    "itemCount": 3
+  },
+  {
+    "slug": "lighting",
+    "label": "Lighting",
+    "description": "Sculptural forms that manipulate photons.",
+    "editorialImage": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?q=80&w=800&auto=format&fit=crop",
+    "itemCount": 2
+  },
+  {
+    "slug": "seating",
+    "label": "Seating",
+    "description": "An exercise in structural ergonomics.",
+    "editorialImage": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=800&auto=format&fit=crop",
+    "itemCount": 2
+  }
+]
